@@ -15,7 +15,13 @@ public class StringFormattingDemo {
         String formattedString = String.format(greetingsTemplate, firstName, evening);
         System.out.println(formattedString);
 
+
         System.out.printf("You have %d computers available at store\n", 7);
+
+
+
+
+
     }
 
 }

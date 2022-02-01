@@ -28,6 +28,18 @@ public class StringsBasics {
                 + Arrays.toString(s.split("e")));					// [ h, llo ]
         System.out.println(s);												// hello
 
+
+        String s1="Hello";
+        String s2="Hello";
+        String s3=new String("Hello");
+        String s4="Bye";
+        System.out.println(s1.equals(s2));//true
+        System.out.println(s1.equals(s3));//true
+        System.out.println(s1.equals(s4));//false
+
+
+
+
     }
 
 }
