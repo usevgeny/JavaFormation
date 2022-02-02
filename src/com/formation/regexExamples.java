@@ -21,7 +21,7 @@ public class regexExamples {
         String[] sentences = sampleText2.split("[\\.!?]");
         System.out.println(Arrays.toString(sentences));
 
-/*
+/*  POSIX character classes
 				\p{Lower}   A lower-case alphabetic character: [a-z]
 				\p{Upper}   An upper-case alphabetic character:[A-Z]
 				\p{ASCII}   All ASCII:[\x00-\x7F]

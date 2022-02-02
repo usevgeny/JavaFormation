@@ -28,6 +28,9 @@ public class StringsBasics {
                 + Arrays.toString(s.split("e")));					// [ h, llo ]
         System.out.println(s);												// hello
 
+        String inputArguments = String.join(",", args);
+        System.out.println(inputArguments);
+
 
         String s1="Hello";
         String s2="Hello";
