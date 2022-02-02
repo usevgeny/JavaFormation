@@ -1,5 +1,7 @@
 package com.formation;
 
+import java.util.Arrays;
+
 public class ForLoop {
 
 
@@ -29,6 +31,26 @@ public class ForLoop {
         /*for (;;) {
 
          } */ //- infinite loop;
+
+        for (int number: arr){
+            if( number%2==0 ){
+                continue;
+            }
+            else{
+                System.out.println("odd number from the array"+Arrays.toString(arr) +": "+number);
+            }
+        }
+
+
+        for (int number: arr){
+            if( number%2==0 ){
+                break;
+            }
+            else{
+                System.out.println("odd number from the array"+Arrays.toString(arr) +": "+number +"until we find an even number");
+            }
+        }
+        // in case of nested loops tbreak finishes the closest loop; so if in nested, only the nested loop will be finished
 
     }
 }
