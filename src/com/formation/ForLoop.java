@@ -14,6 +14,18 @@ public class ForLoop {
             System.out.println("I var is equal to :"+k);
         }
 
+
+        int[] arr = {1, 2, 3, 5, 16};
+        int sum = 0;
+        for (int number : arr){
+            sum+=number;
+            System.out.println("Added "+number+"\n Sum is now "+sum);
+        }
+        System.out.println("The result is now "+sum);
+
+
+       // foreach -- a kind of shortcut word
+
         /*for (;;) {
 
          } */ //- infinite loop;
