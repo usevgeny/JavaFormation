@@ -1,5 +1,7 @@
 package com.formation;
 
+
+//extrait du manuel;
 public class RecursiveMethods {
 
     public static void main(String[] args) {
@@ -9,6 +11,7 @@ public class RecursiveMethods {
 
         System.out.println("iterativeFactorial(4): " + iterativeFactorial(4));
     }
+
 
     private static void callTheSameMethod() {
         callTheSameMethod();
