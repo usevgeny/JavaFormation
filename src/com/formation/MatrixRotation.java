@@ -1,5 +1,6 @@
 package com.formation;
 
+import java.util.Arrays;
 import java.util.Scanner;
 public class MatrixRotation {
 
@@ -9,14 +10,7 @@ public class MatrixRotation {
         System.out.print("Please, enter matrix size: ");
         int size = in.nextInt();
         double[][] matrix = generateMatrix(size);
-       /* printMatrixToConsole(matrix);
-        System.out.println("ROTATION 90edgrees\n");
-        rotate90(matrix);
-        System.out.println("ROTATION 180 dgrees\n");
-        rotate180(matrix);
-        System.out.println("ROTATION 270 dgrees\n");
-        rotate270(matrix);
-        */
+
 
         System.out.println("How you want to rotate matrix:" + System.lineSeparator() +
                 "\t1 - 90" + System.lineSeparator() +
@@ -34,16 +28,24 @@ public class MatrixRotation {
 
     public static boolean rotateMatrix(double[][] matrix, int mode){
 
-        if(mode==1){
-            rotate90(matrix);
-        }
-        else if
-        (mode==2){
-            rotate180(matrix);
-        }
-        else if
-        (mode==3){
-            rotate270(matrix);
+        switch (mode){
+            case 1:
+                System.out.println("90 degrees rotated:" + System.lineSeparator());
+                rotate90(matrix);
+                break;
+
+            case 2:
+                System.out.println("180 degrees rotated:" + System.lineSeparator());
+                rotate180(matrix);
+                break;
+
+            case 3:
+                System.out.println("270 degrees rotated:" + System.lineSeparator());
+                rotate270(matrix);
+                break;
+            default:
+                System.out.println("You selected non-existing mode!");
+                return false;
         }
 
         return true;
@@ -73,38 +75,53 @@ public class MatrixRotation {
 
     public static void rotate90(double[][] matrix) {
 
-       for (int i=0; i<matrix.length;i++){
+       for (int i=0,e=0; i<matrix.length;i++,e++){
 
-           for (int j = matrix.length-1;j>-1;j--){
-               System.out.print(matrix[j][i]+" ");
+           for (int j = matrix.length-1,f=0;j>-1;j--,f++){
+               matrix[e][f]=matrix[j][i];
            }
-           System.out.println();
        }
         }
 
 
     public static void rotate180(double[][] matrix) {
-
-        for (int i= matrix.length-1;i>-1;i--)
+        double [][] temp = new double[matrix.length][matrix[0].length];
+        for (int i=matrix.length-1, e=0;i>-1;i--,e++)
         {
-            for (int j =matrix[i].length-1;j>-1;j--){
-                System.out.print(matrix[i][j]+" ");
+            for (int j=matrix[i].length-1,f=0;j>-1;j--,f++){
+                temp[e][f]=matrix[i][j];
             }
-            System.out.println();
+
+        }
+
+        for (int i=0; i<matrix.length;i++)
+        {
+            for(int j=0;j<matrix.length;j++)
+            {
+                matrix[i][j]=temp[i][j];
+            }
         }
     }
 
 
     public static void rotate270(double[][] matrix) {
+        double [][] temp = new double[matrix.length][matrix[0].length];
+        for (int i=matrix.length-1,e=0; i>-1;i--,e++){
 
-
-        for (int i=matrix.length-1; i>-1;i--){
-
-            for (int j = 0;j<matrix[i].length;j++){
-                System.out.print(matrix[j][i]+" ");
+            for (int j = 0,f=0;j<matrix[i].length;j++,f++){
+                temp[e][f]=matrix[j][i];
             }
-            System.out.println();
         }
+
+        for (int i=0; i<matrix.length;i++)
+        {
+            for(int j=0;j<matrix.length;j++)
+            {
+                matrix[i][j]=temp[i][j];
+            }
+        }
+
+
     }
 
 
