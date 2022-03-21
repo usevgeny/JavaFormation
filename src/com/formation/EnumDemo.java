@@ -30,10 +30,10 @@ public class EnumDemo {
 		System.out.println("============ Enum comparison");
 		
 		System.out.println("Priority.HIGH == Priority.MEDIUM: " 
-								+ (priority == Priority.MEDIUM));	// false
+								+ (priority == Priority.MEDIUM));	// true
 		
 		System.out.println("Priority.HIGH == Priority.HIGH: " 
-								+ (priority == Priority.HIGH));	// true
+								+ (priority == Priority.HIGH));	// false
 		
 		
 		System.out.println("============ Enum ordinal()");
