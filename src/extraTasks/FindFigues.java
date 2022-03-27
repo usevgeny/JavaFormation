@@ -184,7 +184,7 @@ public static int[] FindPairM4PointerSearch(int[] figures, int k) {
 			
 	}
 	
-	return new int[0];
+	return new int[] {figures[l],figures[r]}; // returns the somm which is max proche to k
 	
 }
 
