@@ -47,6 +47,8 @@ public class DefaultMyList implements MyList{
 				size-=1;
 				}
 			}
+		head=null;
+		size=0;
 		// TODO Auto-generated method stub
 		
 	}
@@ -102,11 +104,11 @@ public class DefaultMyList implements MyList{
 		ListNode start = head;
 		while(start != null) { 
 			
-			result = result+start.getValue()+","+" ";  // ath this point it is a n infinite loop as we never progressing to the newt node
+			result = result+start.getValue()+(start.getNext()!=null?","+" ":"");  // ath this point it is a n infinite loop as we never progressing to the newt node
 			start = start.getNext();
 		}
 		
-		return "{["+result+"}]";
+		return "[{"+result+"}]";
 	}
 	
 	private static class ListNode<E> {

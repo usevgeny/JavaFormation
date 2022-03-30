@@ -15,5 +15,8 @@ public static void main(String[] args) {
 	testList.remove(d);
 	System.out.println(testList.toString());
 	System.out.println(testList.size());
+	testList.clear();
+	System.out.println(testList.toString());
+	System.out.println(testList.size());
 }
 }
