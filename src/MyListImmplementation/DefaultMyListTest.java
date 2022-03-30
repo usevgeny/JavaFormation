@@ -15,6 +15,13 @@ public static void main(String[] args) {
 	testList.remove(d);
 	System.out.println(testList.toString());
 	System.out.println(testList.size());
+	for(Object elem:testList.toArray()) 
+		{
+		System.out.println(elem);
+		}
+	
+	Object[] arr1 = testList.toArray();
+	
 	testList.clear();
 	System.out.println(testList.toString());
 	System.out.println(testList.size());

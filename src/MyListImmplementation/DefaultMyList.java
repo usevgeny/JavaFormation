@@ -71,10 +71,18 @@ public class DefaultMyList implements MyList{
 	@Override
 	public Object[] toArray() {
 		Object[] result = new Object[size];
+		ListNode start = head;
 		int index = 0;
+		while(start != null) { 
+			
+			result[index++] = start.getValue();
+						// at this point it is a n infinite loop as we never progressing to the newt node
+			start = start.getNext();
+		}
+		/*int index = 0;
 		for (ListNode x = head; x != null; x = x.next) {
 			result[index++] = x.getValue();
-		}
+		}*/
 		return result;
 	}
 	
