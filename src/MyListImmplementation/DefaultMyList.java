@@ -56,6 +56,21 @@ public class DefaultMyList implements MyList{
 	@Override
 	public boolean remove(Object o) {
 
+		ListNode start = head;
+		//int index = 0;
+		/*while(start != null) { 
+			
+			if(start.getValue().equals(o)) {
+				
+				start=null;
+				
+				size-=1;
+				return true;
+				
+			}
+						// at this point it is a n infinite loop as we never progressing to the newt node
+			start = start.getNext();
+		}*/
 		
 		ListNode<Object> remove = head;
 		if (head!=null) {
@@ -73,7 +88,7 @@ public class DefaultMyList implements MyList{
 		Object[] result = new Object[size];
 		ListNode start = head;
 		int index = 0;
-		while(start != null) { 
+		for(int i=0; i<size;i++) { 
 			
 			result[index++] = start.getValue();
 						// at this point it is a n infinite loop as we never progressing to the newt node

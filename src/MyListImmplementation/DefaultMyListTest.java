@@ -12,7 +12,7 @@ public static void main(String[] args) {
 	testList.add(b);
 	testList.add(c);
 	testList.add(d);
-	testList.remove(d);
+	System.out.println(testList.remove(c));
 	System.out.println(testList.toString());
 	System.out.println(testList.size());
 	for(Object elem:testList.toArray()) 
