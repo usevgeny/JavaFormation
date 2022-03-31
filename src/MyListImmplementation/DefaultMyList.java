@@ -58,26 +58,24 @@ public class DefaultMyList implements MyList{
 
 		ListNode start = head;
 		//int index = 0;
-		/*while(start != null) { 
+		while(start != null) { 
 			
 			if(start.getValue().equals(o)) {
 				
-				start=null;
-				
-				size-=1;
+				System.out.println("Found occurency "+start.getValue());
 				return true;
 				
 			}
 						// at this point it is a n infinite loop as we never progressing to the newt node
 			start = start.getNext();
-		}*/
+		}
 		
-		ListNode<Object> remove = head;
+		/*ListNode<Object> remove = head;
 		if (head!=null) {
 			head=head.getNext();
 			size-=1;
 			return true;
-		}
+		}*/
 		return false;
 		
 		
@@ -110,13 +108,33 @@ public class DefaultMyList implements MyList{
 
 	@Override
 	public boolean contains(Object o) {
-		// TODO Auto-generated method stub
+		ListNode start = head;
+
+		while(start != null) { 
+			
+			if(start.getValue().equals(o)) {
+				
+				
+				return true;
+				
+			}
+						// at this point it is a n infinite loop as we never progressing to the newt node
+			start = start.getNext();
+		}
 		return false;
 	}
 
 	@Override
 	public boolean containsAll(MyList c) {
-		// TODO Auto-generated method stub
+		
+		for(Object obj:c.toArray()) {
+			
+			if(contains(obj)) {
+				return true;}
+			
+		}
+
+		
 		return false;
 	}
 
@@ -130,7 +148,6 @@ public class DefaultMyList implements MyList{
 			result = result+start.getValue()+(start.getNext()!=null?","+" ":"");  // ath this point it is a n infinite loop as we never progressing to the newt node
 			start = start.getNext();
 		}
-		
 		return "[{"+result+"}]";
 	}
 	
