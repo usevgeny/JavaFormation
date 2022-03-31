@@ -2,7 +2,7 @@ package MyListImmplementation;
 
 public class DefaultMyListTest {
 public static void main(String[] args) {
-	DefaultMyList testList = new DefaultMyList();
+	DefaultMyListCorrection testList = new DefaultMyListCorrection();
 	String a = "banana";
 	String b = "cherry";
 	String c = "ananas";
@@ -14,14 +14,14 @@ public static void main(String[] args) {
 	testList.add(c);
 	testList.add(d);
 	String testString=a;
-	DefaultMyList testArray = new DefaultMyList();
+	DefaultMyListCorrection testArray = new DefaultMyListCorrection();
 	//testArray.add(a);
 	//testArray.add(b);
 	testArray.add(t);
 	System.out.println(testList.remove(c));
 	System.out.println("Contains: "+testString+" "+testList.contains(testString));
 	
-	System.out.println("Contains: "+testArray+" "+testList.containsAll(testArray));
+	System.out.println("Contains: "+" "+testList.containsAll(testArray));
 	
 	System.out.println(testList.toString());
 	System.out.println(testList.size());
