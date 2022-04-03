@@ -39,7 +39,7 @@ public class IteratorDemo {
 	System.out.println("\n\n===========ITERATOR REMOVE DEMO===========");
 	
 	
-	iterator=integers.iterator();
+	iterator=integers.iterator(); // already created and here is being reitialized
 	
 	while(iterator.hasNext()){
 		

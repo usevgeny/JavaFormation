@@ -1,6 +1,9 @@
 package IteratorHomeWork;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 public class DefaultMyListTest {
 public static void main(String[] args) {
@@ -43,6 +46,7 @@ public static void main(String[] args) {
 	
 	Iterator<Object> iterator = testList.iterator();
 	
+	
 	System.out.println("Iterator next: "+iterator.hasNext());
 	System.out.println("Iterator next: "+iterator.next());
 	System.out.println("Iterator next: "+iterator.hasNext());
@@ -51,7 +55,12 @@ public static void main(String[] args) {
 	System.out.println("Iterator next: "+iterator.next());
 	System.out.println("Iterator next: "+iterator.hasNext());
 	
-
+	List<Integer> ints = new ArrayList<>(Arrays.asList(1,2,3,4,5, 6,7,8,9,10,11,12));
+	Iterator<Integer>iteratorInts = ints.iterator();
+	
+	System.out.println(iteratorInts.next());
+	System.out.println(iteratorInts.next());
+	System.out.println(iteratorInts.toString());
 	
 	
 }
