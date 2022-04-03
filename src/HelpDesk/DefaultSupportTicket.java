@@ -9,7 +9,9 @@ public class DefaultSupportTicket implements SupportTicket {
 	private int sequentialNumber = 0;
 	private static int counter = 0;
 	
-	
+	{
+		this.requestType=RequestType.OTHER;
+	}
 	public DefaultSupportTicket() {
 		this.sequentialNumber = ++DefaultSupportTicket.counter;
 		
