@@ -9,8 +9,8 @@ public class DefaultLruCache extends LinkedHashMap<Integer, Integer>
 	
 	
 	public DefaultLruCache() {
-		super(16, 0.75f, true);
-	}
+		super(16, 0.75f, true); //16 - initial capacity, 0.75loadFactor
+	} 
 	
 	public DefaultLruCache(int capacity) {
 		super(16, 0.75f, true);
