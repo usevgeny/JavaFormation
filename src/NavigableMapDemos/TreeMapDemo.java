@@ -24,6 +24,14 @@ public class TreeMapDemo {
 		System.out.println("Sorted treeMap: " + treeMap);
 		System.out.println("Descending order: " + treeMap.descendingMap());
 		
-
+		/*NavigableMap<Product, User> productUserMap = 
+				new TreeMap<>(new CustomProductComparator());
+		productUserMap.put(new DefaultProduct(2, "Oregon Cottage Interior Oak Door", "Doors", 109.98), new DefaultUser());
+		productUserMap.put(new DefaultProduct(1, "Hardwood Oak Suffolk Internal Door", "Doors", 109.98), new DefaultUser());
+		
+		System.out.println("***** Demo - Keys are sorted according to Comparator: ");
+		for (Product product : productUserMap.keySet()) {
+			System.out.println(product);
+		}*/
 	}
 }
