@@ -1,8 +1,9 @@
 package extraTasks.FindCelebrity;
 /**
  * Find a celebrity in a group
- * a selebrity is a person that everybodyy in the group knows, 
- * on the contrary this celebrity doesnt know any of the persons of the group
+ * a celebrity is a person that everybody knows in the group. 
+ * on the contrary this celebrity knows nobody in this same group of k people.
+ * Task: find a celebrity (if exists) in a group of k people in the minimum number of questions.
  * @author evgeny
  * https://www.youtube.com/watch?v=xGvQN_g-JCI 
  *
@@ -49,7 +50,8 @@ public class FindCelebrity {
 	
 	public static Person findCeleb(Person[] persons) {
 		
-		int l=0,r=persons.length-1;
+		int l=0;
+		int r=persons.length-1;
 		while(l!=r) {
 			if (persons[l].knows(persons[r])){
 				l++;
