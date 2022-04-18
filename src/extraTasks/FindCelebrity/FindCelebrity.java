@@ -9,47 +9,47 @@ package extraTasks.FindCelebrity;
  *
  */
 public class FindCelebrity {
-	
-	
+
+
 	public static void main(String[] args) {
-		
-		
+
+
 		Person Vasya = new Person("Vasya");
 		Person Dima = new Person("Dima");  //Celebrity, knows nobody, but everybody knows him
 		Person Petya = new Person("Petya");
 		Person Vlad = new Person("Vlad");
 		Person Maksim = new Person("Maksim");
-		
+
 		Vasya.addFriend(Maksim);
 		Vasya.addFriend(Dima);
 		Vasya.addFriend(Vlad);
-		
+
 		Petya.addFriend(Maksim);
 		Petya.addFriend(Dima);
 		Petya.addFriend(Vlad);
-		
+
 		Vlad.addFriend(Vasya);
 		Vlad.addFriend(Dima);
 		Vlad.addFriend(Vlad);
-		
+
 		Maksim.addFriend(Petya);
 		Maksim.addFriend(Dima);
 		Maksim.addFriend(Vlad);
-		
-		
+
+
 		System.out.println(Dima.getAcquaintances());
-		
-		
+
+
 		Person[] groupWithCelebrity = new Person[] {Vasya,Dima,Petya,Vlad,Maksim};
-		
+
 		int l=0,r=groupWithCelebrity.length-1;
-	
+
 		System.out.println(findCeleb(groupWithCelebrity));
-		
+
 	}
-	
+
 	public static Person findCeleb(Person[] persons) {
-		
+
 		int l=0;
 		int r=persons.length-1;
 		while(l!=r) {
@@ -59,24 +59,24 @@ public class FindCelebrity {
 				r--;
 			}
 		}
-	
+
 		for (int i =0; i<persons.length;i++) {
-				
-				if (i != l
-						&&(!persons[i].
-								knows(persons[l])
-								||persons[l].
-								knows(persons[i])
-						  )
+
+			if (i != l
+					&&(!persons[i].
+							knows(persons[l])
+							||persons[l].
+							knows(persons[i])
+							)
 					){	return null;}
-				
-			}
-			
-		
+
+		}
+
+
 		return persons[l];
-		
+
 	}
-	
-	
+
+
 }
 
