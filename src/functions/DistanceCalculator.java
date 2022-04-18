@@ -19,4 +19,4 @@ public interface DistanceCalculator {
 // but functionnalinterface can containas much default  methods and as much static methods as possible 
 
 // so important to remember : ONLY ONE ABSTRACT METHOD, otherwise when using lambda expressions
-// it is not clear which method we should use 
+// it is not clear which method we should use in annonimous function 
